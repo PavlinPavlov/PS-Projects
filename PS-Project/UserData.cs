@@ -36,6 +36,38 @@ namespace PS_Project
             return result;
         }
 
+        public static void SetUserActiveTo(string username, DateTime activeTo)
+        {
+            if (null == _testUsers)
+            {
+                ResetTestUserData();
+            }
+
+            foreach (User item in _testUsers)
+            {
+                if (item.Name.Equals(username))
+                {
+                    item.ActiveDate = activeTo;
+                }
+            }
+        }
+
+        public static void AssignUserRole(string username, UserRole newRole)
+        {
+            if (null == _testUsers)
+            {
+                ResetTestUserData();
+            }
+
+            foreach (User item in _testUsers)
+            {
+                if (item.Name.Equals(username))
+                {
+                    item.Role = (int) newRole;
+                }
+            }
+        }
+
         public static void ResetTestUserData()
         {
             if (null == _testUsers)

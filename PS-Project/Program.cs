@@ -19,7 +19,6 @@ namespace PS_Project
 
             User user = new User();
             validation.ValidateUserInput(ref user);
-            Console.WriteLine(user.FacultyNumber);
 
             switch (LoginValidation.CurrentUserRole)
             {
@@ -43,8 +42,60 @@ namespace PS_Project
                     break;
             }
 
+            Console.WriteLine(UserData.TestUsers[2].Role);
+            ChooseOption(user);
+            Console.WriteLine(UserData.TestUsers[2].Role);
 
             Console.Read(); // for pause
+        }
+
+        private static void ChooseOption(User loggedInUser)
+        {
+            bool exit = false;
+            while (!exit)
+            {
+                Console.WriteLine("0: Log out");
+                if (loggedInUser.Role == 1)
+                {
+                    Console.WriteLine("1: Change user role");
+                    Console.WriteLine("2: Change user active date");
+                }
+                
+                string username;
+                Console.Write("Enter choice: ");
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 0:
+                        Console.WriteLine("Bye");
+                        exit = true;
+                        break;
+                    case 1:
+                        if (loggedInUser.Role == 1)
+                        {
+                            Console.Write(" Enter username: ");
+                            username = Console.ReadLine();
+                            Console.Write(" Enter role: ");
+                            UserRole role = (UserRole) int.Parse(Console.ReadLine());
+                            UserData.AssignUserRole(username, role);
+                        }
+                       
+                        break;
+                    case 2:
+                        if (loggedInUser.Role == 1)
+                        {
+                            Console.Write(" Enter username: ");
+                            username = Console.ReadLine();
+                            Console.Write(" Enter new active date: ");
+                            DateTime newDate = DateTime.Parse(Console.ReadLine());
+                            UserData.SetUserActiveTo(username, newDate);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         public static void PrintTheGivenMessage(string msg)
