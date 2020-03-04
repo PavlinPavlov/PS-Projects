@@ -42,11 +42,7 @@ namespace PS_Project
                     break;
             }
 
-            Console.WriteLine(UserData.TestUsers[2].Role);
-            ChooseOption(user);
-            Console.WriteLine(UserData.TestUsers[2].Role);
-
-            Console.Read(); // for pause
+            ChooseOption(user); // ends when 0 is entered
         }
 
         private static void ChooseOption(User loggedInUser)
@@ -59,6 +55,8 @@ namespace PS_Project
                 {
                     Console.WriteLine("1: Change user role");
                     Console.WriteLine("2: Change user active date");
+                    Console.WriteLine("3: Print all users");
+                    Console.WriteLine("4: Dump log file");
                 }
                 
                 string username;
@@ -91,6 +89,15 @@ namespace PS_Project
                             DateTime newDate = DateTime.Parse(Console.ReadLine());
                             UserData.SetUserActiveTo(username, newDate);
                         }
+                        break;
+                    case 3:
+                        foreach (User item in UserData.TestUsers)
+                        {
+                            Console.WriteLine(item.Name);
+                        }
+                        break;
+                    case 4:
+                        Logger.DumpLog();
                         break;
                     default:
                         break;

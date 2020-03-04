@@ -9,9 +9,9 @@ namespace PS_Project
     static class UserData
     {
 
-        private static User[] _testUsers;
+        private static List<User> _testUsers;
 
-        public static User[] TestUsers
+        public static List<User> TestUsers
         {
             get {
                 ResetTestUserData();
@@ -48,6 +48,7 @@ namespace PS_Project
                 if (item.Name.Equals(username))
                 {
                     item.ActiveDate = activeTo;
+                    Logger.LogActivity("Changed active status of " + username);
                 }
             }
         }
@@ -64,6 +65,7 @@ namespace PS_Project
                 if (item.Name.Equals(username))
                 {
                     item.Role = (int) newRole;
+                    Logger.LogActivity("Assigned new role to " + username);
                 }
             }
         }
@@ -72,31 +74,34 @@ namespace PS_Project
         {
             if (null == _testUsers)
             {
-                _testUsers = new User[3];
+                _testUsers = new List<User>(3);
 
-                _testUsers[0] = new User();
-                _testUsers[0].Name = "Stamat1";
-                _testUsers[0].Password = "shhht123";
-                _testUsers[0].FacultyNumber = "121217000";
-                _testUsers[0].Role = 1;
-                _testUsers[0].CreatedDate = DateTime.Now;
-                _testUsers[0].ActiveDate = DateTime.MaxValue;
+                User user1 = new User();
+                user1.Name = "Stamat1";
+                user1.Password = "shhht123";
+                user1.FacultyNumber = "121217000";
+                user1.Role = 1;
+                user1.CreatedDate = DateTime.Now;
+                user1.ActiveDate = DateTime.MaxValue;
+                _testUsers.Add(user1);
 
-                _testUsers[1] = new User();
-                _testUsers[1].Name = "Stamat2";
-                _testUsers[1].Password = "shhht123";
-                _testUsers[1].FacultyNumber = "121217001";
-                _testUsers[1].Role = 4;
-                _testUsers[1].CreatedDate = DateTime.Now;
-                _testUsers[1].ActiveDate = DateTime.MaxValue;
+                User user2 = new User();
+                user2.Name = "Stamat2";
+                user2.Password = "shhht123";
+                user2.FacultyNumber = "121217001";
+                user2.Role = 4;
+                user2.CreatedDate = DateTime.Now;
+                user2.ActiveDate = DateTime.MaxValue;
+                _testUsers.Add(user2);
 
-                _testUsers[2] = new User();
-                _testUsers[2].Name = "Stamat3";
-                _testUsers[2].Password = "shhht123";
-                _testUsers[2].FacultyNumber = "121217002";
-                _testUsers[2].Role = 4;
-                _testUsers[2].CreatedDate = DateTime.Now;
-                _testUsers[2].ActiveDate = DateTime.MaxValue;
+                User user3 = new User();
+                user3.Name = "Stamat3";
+                user3.Password = "shhht123";
+                user3.FacultyNumber = "121217002";
+                user3.Role = 4;
+                user3.CreatedDate = DateTime.Now;
+                user3.ActiveDate = DateTime.MaxValue;
+                _testUsers.Add(user3);
             }
         }
     }

@@ -10,19 +10,19 @@ namespace PS_Project
     {
         public delegate void ActionOnError(string errorMsg);
 
-        private string Username { get; set; }
-        private string Password { get; set; }
+        public static string Username { get; set; }
+        public static string Password { get; set; }
+
         private string ErrorMessage { get; set; }
         private ActionOnError ErrorAction { get; set; }
 
         public static UserRole CurrentUserRole { private set; get; }
-
-        
+          
 
         public LoginValidation(string username, string password, ActionOnError errorDelegateFunction)
         {
-            this.Username = username;
-            this.Password = password;
+            Username = username;
+            Password = password;
             ErrorAction = new ActionOnError(errorDelegateFunction);
         }
 
@@ -53,7 +53,8 @@ namespace PS_Project
             }
 
             CurrentUserRole = (UserRole) user.Role;
-            Console.WriteLine(user.Role);
+            Logger.LogActivity("Logged in successful as " + CurrentUserRole);
+
             return true;
         }
     }
