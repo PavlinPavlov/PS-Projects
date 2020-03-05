@@ -20,6 +20,8 @@ namespace PS_Project
             User user = new User();
             validation.ValidateUserInput(ref user);
 
+            if (null == user) return;
+
             PrintOutRole(LoginValidation.CurrentUserRole);
 
             ChooseOption(user); // ends when 0 is entered
