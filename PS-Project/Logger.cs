@@ -9,6 +9,7 @@ namespace PS_Project
 {
     static class Logger
     {
+        private static readonly string fileName = "C:/Users/Pavlin/Projects/CSharp/PS-Project/PS-Project/log.txt";
         private static List<string> currentSessionActivities = new List<string>();
 
         public static void LogActivity(string activity)
@@ -17,14 +18,13 @@ namespace PS_Project
                 + LoginValidation.Username + ";"
                 + LoginValidation.CurrentUserRole + ";"
                 + activity;
+
             currentSessionActivities.Add(activityLine);
             WriteLineToFile(activityLine);
         }
 
         private static void WriteLineToFile(string line)
         {
-            string fileName = "C:/Users/Pavlin/Projects/CSharp/PS-Project/PS-Project/log.txt";
-
             if (File.Exists(fileName))
             { 
                 File.AppendAllText(fileName, line + "\n");

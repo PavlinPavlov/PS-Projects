@@ -20,27 +20,7 @@ namespace PS_Project
             User user = new User();
             validation.ValidateUserInput(ref user);
 
-            switch (LoginValidation.CurrentUserRole)
-            {
-                case UserRole.ADMIN:
-                    Console.WriteLine("Role: Admin");
-                    break;
-                case UserRole.ANONYMOUS:
-                    Console.WriteLine("Role: Anonymous");
-                    break;
-                case UserRole.INSPECTOR:
-                    Console.WriteLine("Role: Inspector");
-                    break;
-                case UserRole.PROFESSOR:
-                    Console.WriteLine("Role: Professor");
-                    break;
-                case UserRole.STUDENT:
-                    Console.WriteLine("Role: Student");
-                    break;
-                default:
-                    Console.WriteLine("Role: None");
-                    break;
-            }
+            PrintOutRole(LoginValidation.CurrentUserRole);
 
             ChooseOption(user); // ends when 0 is entered
         }
@@ -69,6 +49,7 @@ namespace PS_Project
                         Console.WriteLine("Bye");
                         exit = true;
                         break;
+
                     case 1:
                         if (loggedInUser.Role == 1)
                         {
@@ -80,6 +61,7 @@ namespace PS_Project
                         }
                        
                         break;
+
                     case 2:
                         if (loggedInUser.Role == 1)
                         {
@@ -90,21 +72,50 @@ namespace PS_Project
                             UserData.SetUserActiveTo(username, newDate);
                         }
                         break;
+
                     case 3:
                         foreach (User item in UserData.TestUsers)
                         {
                             Console.WriteLine(item.Name);
                         }
                         break;
+
                     case 4:
                         Logger.DumpLog();
                         break;
+
                     default:
                         break;
                 }
             }
         }
 
+        private static void PrintOutRole(UserRole role)
+        {
+            switch (role)
+            {
+                case UserRole.ADMIN:
+                    Console.WriteLine("Role: Admin");
+                    break;
+                case UserRole.ANONYMOUS:
+                    Console.WriteLine("Role: Anonymous");
+                    break;
+                case UserRole.INSPECTOR:
+                    Console.WriteLine("Role: Inspector");
+                    break;
+                case UserRole.PROFESSOR:
+                    Console.WriteLine("Role: Professor");
+                    break;
+                case UserRole.STUDENT:
+                    Console.WriteLine("Role: Student");
+                    break;
+                default:
+                    Console.WriteLine("Role: None");
+                    break;
+            }
+        }
+
+        // used for a delegate
         public static void PrintTheGivenMessage(string msg)
         {
             Console.WriteLine("!!!" + msg + "!!!");
