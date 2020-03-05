@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PS_Project
 {
-    class LoginValidation
+    public class LoginValidation
     {
         public delegate void ActionOnError(string errorMsg);
 

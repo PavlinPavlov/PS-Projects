@@ -1,0 +1,9 @@
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\bin\Debug\PS-Project.exe.config
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\bin\Debug\PS-Project.exe
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\bin\Debug\PS-Project.pdb
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\obj\Debug\PS-Project.csprojAssemblyReference.cache
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\obj\Debug\PS-Project.csproj.CoreCompileInputs.cache
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\obj\Debug\PS-Project.exe
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\obj\Debug\PS-Project.pdb
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\bin\Debug\log.txt
+C:\Users\Pavlin\Projects\CSharp\PS-Project\PS-Project\bin\Debug\users.txt

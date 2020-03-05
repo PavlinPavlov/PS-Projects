@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PS_Project
 {
-    class User
+    public class User
     {
         public string Name;
         public string Password;

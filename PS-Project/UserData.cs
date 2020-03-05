@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PS_Project
 {
-    static class UserData
+    static public class UserData
     {
 
         private static List<User> _testUsers;
