@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="Студентска информационна система" Height="600" Width="900">
     <Grid>
-        <GroupBox Header="Лични данни" HorizontalAlignment="Left" Height="175" Margin="50,30,0,0" VerticalAlignment="Top" Width="800">
-            <Grid>
+        <!-- Start of first group -->
+        <GroupBox Header="Лични данни" HorizontalAlignment="Left" Height="175" Margin="50,30,0,0" VerticalAlignment="Top" Width="500">
+            <Grid x:Name="PersonalDataGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
                     <RowDefinition Height="50" />
@@ -18,18 +19,28 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
+                <!-- first group -->
+                
                 <Label Content="Име:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="0" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,340,0" Grid.Row="0" Grid.Column="0" />
+                <TextBox x:Name="FirstName" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="0" Grid.Column="0" />
 
                 <Label Content="Презиме:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="1" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,340,0" Grid.Row="1" Grid.Column="0" />
+                <TextBox x:Name="SecondName" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="1" Grid.Column="0" />
 
                 <Label Content="Фамилия:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="2" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,340,0" Grid.Row="2" Grid.Column="0" />
+                <TextBox x:Name="LastName" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="2" Grid.Column="0" />
             </Grid>
-        </GroupBox>
+        </GroupBox> <!-- End of first group -->
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Width="150" Height="175" Margin="0,30,100,0">
+            <Button Content="Изчисти" Width="100" Margin="0,30,0,0" Click="CrearWholeInput" />
+            <Button Content="Изпрати" Width="100" Margin="0,30,0,0" Click="CollectInfoFromForm" />
+            <Button Content="Заключи" Width="100" Margin="0,30,0,0" Click="ToggleActive" />
+        </StackPanel>
+        
+        <!-- Start of second group -->
         <GroupBox Header="Студентска информация" HorizontalAlignment="Left" Height="300" Margin="50,230,0,0" VerticalAlignment="Top" Width="800">
-            <Grid>
+            <Grid x:Name="StudentInfoGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
                     <RowDefinition Height="50" />
@@ -45,31 +56,31 @@
                 <!-- second group, first column -->
 
                 <Label Content="Факултет:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="0" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="0" Grid.Column="0" />
+                <TextBox x:Name="Faculty" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="0" Grid.Column="0" />
 
                 <Label Content="Специалност:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="1" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="1" Grid.Column="0" />
+                <TextBox x:Name="Specialty" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="1" Grid.Column="0" />
 
                 <Label Content="ОКС:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="2" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="2" Grid.Column="0" />
+                <TextBox x:Name="Degree" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="2" Grid.Column="0" />
 
                 <Label Content="Статус:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="3" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="3" Grid.Column="0" />
+                <TextBox x:Name="Status" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="3" Grid.Column="0" />
 
                 <Label Content="Фак. Номер:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="4" Grid.Column="0"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="4" Grid.Column="0" />
+                <TextBox x:Name="FacultyNumber" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="4" Grid.Column="0" />
 
                 <!-- second group, second column -->
 
-                <Label Content="Курс:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,12,0,0" Grid.Row="0" Grid.Column="1"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,50,0" Grid.Row="0" Grid.Column="1" />
+                <Label Content="Курс:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,12,0,0" Grid.Row="0" Grid.Column="1"/>
+                <TextBox x:Name="Year" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="0" Grid.Column="1" />
 
-                <Label Content="Поток:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,12,0,0" Grid.Row="1" Grid.Column="1"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,50,0" Grid.Row="1" Grid.Column="1" />
+                <Label Content="Поток:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,12,0,0" Grid.Row="1" Grid.Column="1"/>
+                <TextBox x:Name="Potok" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="1" Grid.Column="1" />
 
-                <Label Content="Група:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,12,0,0" Grid.Row="2" Grid.Column="1"/>
-                <TextBox HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,50,0" Grid.Row="2" Grid.Column="1" />
+                <Label Content="Група:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,12,0,0" Grid.Row="2" Grid.Column="1"/>
+                <TextBox x:Name="Group" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="2" Grid.Column="1" />
             </Grid>
-        </GroupBox>
+        </GroupBox> <!-- End of second group -->
     </Grid>
 </Window>

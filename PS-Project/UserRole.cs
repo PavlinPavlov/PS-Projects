@@ -1,6 +1,6 @@
 ﻿namespace PS_Project
 {
-    enum UserRole
+    public enum UserRole
     {
         ANONYMOUS,
         ADMIN,

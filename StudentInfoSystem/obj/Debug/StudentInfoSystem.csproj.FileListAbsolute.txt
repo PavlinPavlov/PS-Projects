@@ -13,3 +13,11 @@ C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\StudentIn
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.csproj.CoreCompileInputs.cache
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.exe
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.pdb
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\MainForm.g.cs
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\bin\Debug\log.txt
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\bin\Debug\users.txt
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\bin\Debug\PS-Project.exe
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\bin\Debug\PS-Project.pdb
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\bin\Debug\PS-Project.exe.config
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\MainForm.baml
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.csproj.CopyComplete
