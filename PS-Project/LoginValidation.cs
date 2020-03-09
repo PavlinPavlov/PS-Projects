@@ -61,7 +61,7 @@ namespace PS_Project
 
             SaveUserToFile(user);
 
-            return true;
+            return user != null;
         }
 
         private string[] GettAllLines()

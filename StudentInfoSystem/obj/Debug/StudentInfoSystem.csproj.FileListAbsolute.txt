@@ -21,3 +21,5 @@ C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\bin\Debug\PS-Projec
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\bin\Debug\PS-Project.exe.config
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\MainForm.baml
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.csproj.CopyComplete
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\LoginForm.g.cs
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\LoginForm.baml
