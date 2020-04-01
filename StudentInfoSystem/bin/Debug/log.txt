@@ -21,3 +21,5 @@
 2020-03-09 09:25:08;Stamat1;ADMIN;Times logged in before: 0
 2020-03-09 09:27:23;Stamat1;ADMIN;Logged in successful as ADMIN
 2020-03-09 09:27:23;Stamat1;ADMIN;Times logged in before: 1
+2020-03-09 09:31:14;Stamat1;ADMIN;Logged in successful as ADMIN
+2020-03-09 09:31:14;Stamat1;ADMIN;Times logged in before: 2
