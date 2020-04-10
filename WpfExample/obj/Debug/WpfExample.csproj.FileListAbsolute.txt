@@ -1,0 +1,16 @@
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\App.g.cs
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample_MarkupCompile.cache
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\bin\Debug\WpfExample.exe.config
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\bin\Debug\WpfExample.exe
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\bin\Debug\WpfExample.pdb
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\MainWindowView.g.cs
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample_MarkupCompile.lref
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\MainWindowView.baml
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample.g.resources
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample.Properties.Resources.resources
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample.csproj.GenerateResource.cache
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample.csproj.CoreCompileInputs.cache
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample.exe
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample.pdb
+C:\Users\Pavlin\Projects\CSharp\PS-Project\WpfExample\obj\Debug\WpfExample.csprojAssemblyReference.cache
