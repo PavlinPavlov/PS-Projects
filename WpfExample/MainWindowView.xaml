@@ -15,9 +15,16 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Width="100" Height="100" Content="{Binding HiButtonContent}" Grid.Column="0"
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+            <Button Width="100" Height="100" Content="{Binding HiButtonContent}" Grid.Column="0"
             Command="{Binding HiButtonCommand}" CommandParameter="Здрасти!" />
-        <Button Width="100" Height="100" Content="Toggle Click" Grid.Column="1"
+
+            <Button Width="100" Height="100" Content="Toggle Click" Grid.Column="1"
             Command="{Binding ToggleExecuteCommand}"/>
+
+        <Label Content="{Binding CurrentDate}" Grid.Column="0" Grid.Row="1" />
     </Grid>
 </Window>
