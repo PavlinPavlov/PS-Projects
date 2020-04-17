@@ -23,3 +23,4 @@ C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\MainForm.
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\StudentInfoSystem.csproj.CopyComplete
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\LoginForm.g.cs
 C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\LoginForm.baml
+C:\Users\Pavlin\Projects\CSharp\PS-Project\StudentInfoSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs

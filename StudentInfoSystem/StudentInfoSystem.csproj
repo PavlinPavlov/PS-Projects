@@ -64,6 +64,8 @@
     <Compile Include="Student.cs" />
     <Compile Include="StudentData.cs" />
     <Compile Include="StudentValidation.cs" />
+    <Compile Include="ViewModel\BasicCommand.cs" />
+    <Compile Include="ViewModel\MainFormVM.cs" />
     <Page Include="LoginForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

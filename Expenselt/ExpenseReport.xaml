@@ -34,6 +34,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+                
                 <Label Grid.Column="0" Grid.Row="0" Content="Name: "></Label>
                 <Label Grid.Column="1" Grid.Row="0" Content="{Binding XPath=@Name}" ></Label>
                 <Label Grid.Column="0" Grid.Row="1" Content="Department: "></Label>

@@ -27,20 +27,20 @@
                 <!-- first group -->
                 
                 <Label Content="Име:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="0" Grid.Column="0"/>
-                <TextBox x:Name="FirstName" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="0" Grid.Column="0" />
+                <TextBox x:Name="FirstName" Text="{Binding Path=StudentFirstName, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="0" Grid.Column="0" />
 
                 <Label Content="Презиме:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="1" Grid.Column="0"/>
-                <TextBox x:Name="SecondName" IsEnabled="{Binding Path=IsActive}" Text="{Binding Path=StudentProp.SecondName, Mode=OneWayToSource}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="1" Grid.Column="0" />
+                <TextBox x:Name="SecondName" Text="{Binding Path=StudentSecondName, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="1" Grid.Column="0" />
 
                 <Label Content="Фамилия:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="2" Grid.Column="0"/>
-                <TextBox x:Name="LastName" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="2" Grid.Column="0" />
+                <TextBox x:Name="LastName" Text="{Binding Path=StudentLastName, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,40,0" Grid.Row="2" Grid.Column="0" />
             </Grid>
         </GroupBox> <!-- End of first group -->
 
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Width="150" Height="175" Margin="0,30,100,0">
-            <Button Content="Изчисти" Width="100" Margin="0,30,0,0" Click="CrearWholeInput" />
-            <Button Content="Изпрати" Width="100" Margin="0,30,0,0" Click="CollectInfoFromForm" />
-            <Button Content="Заключи" Command="{Binding EnableCommand}" Width="100" Margin="0,30,0,0" Click="ToggleActive" />
+            <Button Content="Изчисти" Command="{Binding ClearDataCommand}" Width="100" Margin="0,30,0,0"  />
+            <Button Content="Изпрати" Command="{Binding CollectDataCommand}" Width="100" Margin="0,30,0,0"  />
+            <Button Content="Заключи" Command="{Binding EnableCommand}" Width="100" Margin="0,30,0,0"  />
         </StackPanel>
         
         <!-- Start of second group -->
@@ -61,30 +61,30 @@
                 <!-- second group, first column -->
 
                 <Label Content="Факултет:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="0" Grid.Column="0"/>
-                <TextBox x:Name="Faculty" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="0" Grid.Column="0" />
+                <TextBox x:Name="Faculty" Text="{Binding Path=StudentFaculty, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="0" Grid.Column="0" />
 
                 <Label Content="Специалност:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="1" Grid.Column="0"/>
-                <TextBox x:Name="Specialty" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="1" Grid.Column="0" />
+                <TextBox x:Name="Specialty" Text="{Binding Path=StudentSpecialty, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="1" Grid.Column="0" />
 
                 <Label Content="ОКС:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="2" Grid.Column="0"/>
-                <TextBox x:Name="Degree" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="2" Grid.Column="0" />
+                <TextBox x:Name="Degree" Text="{Binding Path=StudentDegree, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="2" Grid.Column="0" />
 
                 <Label Content="Статус:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="3" Grid.Column="0"/>
-                <TextBox x:Name="Status" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="3" Grid.Column="0" />
+                <TextBox x:Name="Status" Text="{Binding Path=StudentStatus, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="3" Grid.Column="0" />
 
                 <Label Content="Фак. Номер:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,12,0,0" Grid.Row="4" Grid.Column="0"/>
-                <TextBox x:Name="FacultyNumber" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="4" Grid.Column="0" />
+                <TextBox x:Name="FacultyNumber" Text="{Binding Path=StudentFacultyNumber, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="22" Margin="0,15,50,0" Grid.Row="4" Grid.Column="0" />
 
                 <!-- second group, second column -->
 
                 <Label Content="Курс:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,12,0,0" Grid.Row="0" Grid.Column="1"/>
-                <TextBox x:Name="Year" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="0" Grid.Column="1" />
+                <TextBox x:Name="Year" Text="{Binding Path=StudentYear, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="0" Grid.Column="1" />
 
                 <Label Content="Поток:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,12,0,0" Grid.Row="1" Grid.Column="1"/>
-                <TextBox x:Name="Potok" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="1" Grid.Column="1" />
+                <TextBox x:Name="Potok" Text="{Binding Path=StudentPotok, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="1" Grid.Column="1" />
 
                 <Label Content="Група:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,12,0,0" Grid.Row="2" Grid.Column="1"/>
-                <TextBox x:Name="Group" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="2" Grid.Column="1" />
+                <TextBox x:Name="Group" Text="{Binding Path=StudentGroup, Mode=TwoWay}" IsEnabled="{Binding Path=IsEnabled}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="22" Margin="0,15,85,0" Grid.Row="2" Grid.Column="1" />
             </Grid>
         </GroupBox> <!-- End of second group -->
     </Grid>
