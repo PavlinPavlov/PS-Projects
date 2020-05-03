@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Input;
 
@@ -26,9 +25,16 @@ namespace StudentInfoSystem.ViewModel
         public string StudentPotok { get; set; }
         public string StudentGroup { get; set; }
 
+        public List<string> StudStatusChoices { get; set; }
 
-        // from INotifyPropertyChanged interface
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+        public MainFormVM()
+        {
+            FillStudStatusChoices();
+        }
+
 
         public ICommand EnableCommand
         {
@@ -80,6 +86,7 @@ namespace StudentInfoSystem.ViewModel
 
         private void CollectData()
         {
+            if (StudentProp == null) StudentProp = new Student();
             StudentProp.FirstName = StudentFirstName;
             StudentProp.SecondName = StudentSecondName;
             StudentProp.LastName = StudentLastName;
@@ -105,6 +112,31 @@ namespace StudentInfoSystem.ViewModel
             Console.WriteLine("StudentYear -" + StudentYear);
             Console.WriteLine("StudentPotok -" + StudentPotok);
             Console.WriteLine("StudentGroup -" + StudentGroup);
+        }
+
+        private void FillStudStatusChoices()
+        {
+            StudStatusChoices = new List<string>();
+            using (IDbConnection connection = new
+            SqlConnection(Properties.Settings.Default.DbConnect))
+            {
+                string sqlquery = @"SELECT StatusDescr FROM StudStatus";
+                IDbCommand command = new SqlCommand();
+                command.Connection = connection;
+                connection.Open();
+                command.CommandText = sqlquery;
+
+                IDataReader reader = command.ExecuteReader();
+
+                bool notEndOfResult;
+                notEndOfResult = reader.Read();
+                while (notEndOfResult)
+                {
+                    string s = reader.GetString(0);
+                    StudStatusChoices.Add(s);
+                    notEndOfResult = reader.Read();
+                }
+            }
         }
 
     }

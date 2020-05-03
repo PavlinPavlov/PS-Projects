@@ -1,4 +1,4 @@
-﻿namespace PS_Project
+﻿namespace UserLogin
 {
     public enum UserRole
     {

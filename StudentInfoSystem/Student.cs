@@ -19,6 +19,6 @@ namespace StudentInfoSystem
         public int Year { get; set; }
         public int Potok { get; set; }
         public int Group { get; set; }
-
+        public int StudentId { get; set; }
     }
 }

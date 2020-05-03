@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PS_Project
+namespace UserLogin
 {
     static public class UserData
     {
@@ -23,8 +23,9 @@ namespace PS_Project
         public static User IsUserPassCorrect(string username, string password)
         {
             User result = null;
-
-            foreach (User item in TestUsers)
+            UserLoginContext context = new UserLoginContext();
+            List<User> dbUsers = (from u in context.Users select u).ToList();
+            foreach (User item in dbUsers)
             {
                 if (item.Name.Equals(username) && item.Password.Equals(password))
                 {
@@ -55,24 +56,26 @@ namespace PS_Project
 
         public static void AssignUserRole(string username, UserRole newRole)
         {
-            if (null == _testUsers)
+            
+
+            UserLoginContext context = new UserLoginContext();
+
+            if (null == context.Users)
             {
                 ResetTestUserData();
             }
 
-            foreach (User item in _testUsers)
-            {
-                if (item.Name.Equals(username))
-                {
-                    item.Role = (int) newRole;
-                    Logger.LogActivity("Assigned new role to " + username);
-                }
-            }
+            User usr =
+            (from u in UserData.TestUsers
+             where u.Name == username
+             select u).First();
+            usr.Role = (int)newRole;
+            context.SaveChanges();
         }
 
         public static void ResetTestUserData()
         {
-            if (null == _testUsers)
+            if (_testUsers == null)
             {
                 _testUsers = new List<User>(3);
 

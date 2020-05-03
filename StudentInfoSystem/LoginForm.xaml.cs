@@ -1,4 +1,4 @@
-﻿using PS_Project;
+﻿using UserLogin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +25,20 @@ namespace StudentInfoSystem
         public LoginForm()
         {
             InitializeComponent();
+
+            StudentInfoContext context = new StudentInfoContext();
+            foreach (Student st in StudentData.TestStudents)
+            {
+                context.Students.Add(st);
+            }
+            context.SaveChanges();
+
+            UserLoginContext usersContext = new UserLoginContext();
+            foreach (User user in UserData.TestUsers)
+            {
+                usersContext.Users.Add(user);
+            }
+            usersContext.SaveChanges();
         }
 
         public void Login(object sender, RoutedEventArgs e)
